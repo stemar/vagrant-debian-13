@@ -1,0 +1,2 @@
+# https://packages.sury.org/php/README.txt
+deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyring.gpg] https://packages.sury.org/php/ trixie main
