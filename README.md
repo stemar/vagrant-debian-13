@@ -225,7 +225,7 @@ You see the "Apache2 Debian Default Page".
 
 #### Check your domain(s)
 
-Replace `domain.com` with your domain and your custom forwarded port number.
+Replace `domain.com` with your domain and your host HTTP port number.
 
 <http://domain.com.localhost:8000>
 

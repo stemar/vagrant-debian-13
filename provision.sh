@@ -24,7 +24,7 @@ apt-get -q=2 update
 cp /vagrant/config/localhost.conf /etc/apache2/conf-available/localhost.conf
 cp /vagrant/config/virtualhost.conf /etc/apache2/sites-available/virtualhost.conf
 sed -i 's|GUEST_SYNCED_FOLDER|'$GUEST_SYNCED_FOLDER'|' /etc/apache2/sites-available/virtualhost.conf
-sed -i 's|FORWARDED_PORT_80|'$FORWARDED_PORT_80'|' /etc/apache2/sites-available/virtualhost.conf
+sed -i 's|HOST_HTTP_PORT|'$HOST_HTTP_PORT'|' /etc/apache2/sites-available/virtualhost.conf
 a2enconf localhost &>/dev/null
 a2enmod rewrite vhost_alias &>/dev/null
 a2ensite virtualhost &>/dev/null
@@ -73,7 +73,7 @@ fi
 cp /vagrant/config/adminer.php /usr/share/adminer/adminer.php
 cp /vagrant/config/adminer-plugins.php /usr/share/adminer/adminer-plugins.php
 cp /vagrant/config/adminer.conf /etc/apache2/conf-available/adminer.conf
-sed -i 's|FORWARDED_PORT_80|'$FORWARDED_PORT_80'|' /etc/apache2/conf-available/adminer.conf
+sed -i 's|HOST_HTTP_PORT|'$HOST_HTTP_PORT'|' /etc/apache2/conf-available/adminer.conf
 a2enconf adminer &>/dev/null
 
 echo '==> Installing NPM and Node.js'
