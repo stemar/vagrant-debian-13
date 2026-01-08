@@ -98,13 +98,14 @@ echo '==> Cleaning apt cache'
 apt-get -q=2 autoclean
 apt-get -q=2 autoremove
 
-echo '==> Versions:'
+echo
+echo '==> Stack versions <=='
 
 lsb_release -d | cut -f 2
 openssl version
 curl --version | head -n1 | cut -d '(' -f 1
 git --version
-apache2 -v | head -n1
+apache2 -v | head -n1 | cut -d ' ' -f 3
 mariadb -V
 php -v | head -n1
 python3 --version

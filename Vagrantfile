@@ -20,7 +20,9 @@ Vagrant.configure("2") do |config|
     config.vm.network :forwarded_port, **port_options
   end
 
-  config.vm.synced_folder settings[:synced_folder][:host], settings[:synced_folder][:guest], owner: "vagrant", group: "vagrant"
+  host_synced_folder = settings[:synced_folder].delete(:host)
+  guest_synced_folder = settings[:synced_folder].delete(:guest)
+  config.vm.synced_folder host_synced_folder, guest_synced_folder, **settings[:synced_folder]
 
   settings[:copy_files].each do |file_options|
     config.vm.provision :file, **file_options
@@ -28,7 +30,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell, path: "provision.sh", env: {
     "FORWARDED_PORT_80"   => settings[:forwarded_ports].find{|port| port[:guest] == 80}[:host],
-    "GUEST_SYNCED_FOLDER" => settings[:synced_folder][:guest],
+    "GUEST_SYNCED_FOLDER" => guest_synced_folder,
     "PHP_ERROR_REPORTING" => settings[:php_error_reporting],
     "TIMEZONE"            => settings[:machine][:timezone]
   }
