@@ -3,12 +3,11 @@ settings = YAML.load_file(File.join(File.expand_path(__dir__), "settings.yaml"))
 
 Vagrant.require_version ">= 2.0.0"
 Vagrant.configure("2") do |config|
-  hostname = settings[:machine][:hostname]
-  config.vm.define hostname
-  config.vm.hostname = hostname
+  config.vm.define settings[:machine][:hostname]
+  config.vm.hostname = settings[:machine][:hostname]
   config.vm.box = settings[:machine][:box]
   config.vm.provider "virtualbox" do |vb|
-    vb.name   = hostname
+    vb.name   = settings[:machine][:hostname]
     vb.memory = settings[:machine][:memory]
     vb.cpus   = settings[:machine][:cpus]
   end
