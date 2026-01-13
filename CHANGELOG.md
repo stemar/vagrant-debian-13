@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.2 - 2026-01-08
+## 1.0.1 - 2026-01-08
 
 ### Changed
 
@@ -13,7 +13,7 @@
 - Modified the version section of `provision.sh` for the section title and the Apache version output.
 - Updated the last section of `README.md`.
 
-## 1.0.1 - 2025-10-04
+## 1.0.0 - 2025-10-04
 
 _First release_
 
