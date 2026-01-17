@@ -3,7 +3,7 @@
 Make a Vagrant box with Debian 13 LAMP stack, plus configure it for development.
 
 - Host: Linux or Mac.
-- Guest: Debian 13, Apache 2.4, MariaDB 11.8, PHP 8.4, Python 3.13, NPM 9+, Node.js 20+, Git 2+.
+- Guest: Debian 13, Apache 2.4, MariaDB 11.8, PHP 8.4, Python 3.13, NPM 9.x, Node.js 20.x, Git 2.x.
 
 - Leave code and version control files physically outside the VM while virtually accessing them inside the VM.
 - Use any GUI tool (IDEs, browsers, database administration applications, Git clients) outside the VM to access code and data inside the VM.
