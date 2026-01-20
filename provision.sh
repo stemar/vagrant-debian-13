@@ -76,6 +76,10 @@ cp /vagrant/config/adminer.conf /etc/apache2/conf-available/adminer.conf
 sed -i 's|HOST_HTTP_PORT|'$HOST_HTTP_PORT'|' /etc/apache2/conf-available/adminer.conf
 a2enconf adminer &>/dev/null
 
+echo '==> Installing Ruby & irb'
+
+apt-get -q=2 install ruby-full &>/dev/null
+
 echo '==> Installing NPM and Node.js'
 
 DEBIAN_FRONTEND=noninteractive apt-get -q=2 install npm &>/dev/null
@@ -109,5 +113,6 @@ apache2 -v | head -n1 | cut -d ' ' -f 3
 mariadb -V
 php -v | head -n1
 python3 --version
+ruby -v
 echo npm $(npm -v)
 echo node.js $(nodejs -v)
