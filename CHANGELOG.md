@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.0.4 - 2026-02-05
+
+### Added
+
+- Added `config/php.ini`
+- Added `PHPINIDir` in `config/virtualhost.conf`
+
+### Changed
+
+- Modified `provision.sh` to insert the timezone in `php.ini` from `settings.yaml` > `:machine:timezone`
+
+### Removed
+
+- Deleted `config/php.ini.htaccess`
+- Removed `& ~E_DEPRECATED` from `settings.yaml` > `:php_error_reporting`
+
 ## 1.0.3 - 2026-01-19
 
 ### Added

@@ -55,7 +55,7 @@ vagrant ssh
 - MariaDB and Adminer with no password for username `root`.
     - Avoid writing a password a zillion times through development.
 - Adminer served at `http://localhost:8000/adminer.php`.
-- Development-specific `php.ini` settings from `.htaccess` for all local websites.
+- Development-specific `php.ini` settings for all local websites.
 
 ---
 
@@ -91,7 +91,7 @@ Edit `config` files if needed.
 
 - Edit the `VirtualDocumentRoot` public directory value in `virtualhost.conf`.
 - Add `VirtualHost`s in `virtualhost.conf`.
-- Edit `php.ini.htaccess` values.
+- Edit `php.ini` values.
 - Add/edit lines to `bash_aliases`.
 
 Edit `provision.sh` if needed.
