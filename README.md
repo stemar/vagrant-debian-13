@@ -166,6 +166,7 @@ lsb_release -a
 sudo apache2 -v
 mariadb -V
 php -v
+python3 --version
 git --version
 openssl version
 curl --version
