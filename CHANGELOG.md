@@ -10,7 +10,6 @@
 
 ### Changed
 
-- Changed the MariaDB mirror URL for version 11.8
 - Modified alias `ll` in `config/bash_aliases`
 - Updated `README.md`
 
@@ -21,6 +20,12 @@
 - Removed `:php_error_reporting` from `settings.yaml`
 - Removed `PHP_ERROR_REPORTING` from `Vagrantfile`
 - Removed `PHP_ERROR_REPORTING_INT` and its handling from `provision.sh`
+
+## 1.0.4 - 2026-02-06
+
+### Changed
+
+- Changed the MariaDB mirror URL for version 11.8
 
 ## 1.0.3 - 2026-01-19
 
